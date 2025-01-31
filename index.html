@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Calculater App | Jihad Thabit</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="result">
+                <p class="hash"></p>
+                <p class="main-result"></p>
+            </div>
+            <div class="grid">
+                <div class="result-op">
+                    <button onclick="deleteNum()" title="Delete the last entry" aria-label="Delete Last Entry">DEL</button>
+                    <button onclick="clearAll()" title="Clear All" aria-label="Clear All">C</button>
+                </div>
+                <div class="numbers">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>0</button>
+                    <button>.</button>
+                </div>
+                <div class="ops">
+                    <button>/</button>
+                    <button style="padding-top: .75em;">*</button>
+                    <button>-</button>
+                    <button>+</button>
+                    <button onclick="getResult()" class="eql-btn">=</button>
+                </div>
+            </div>
+            <p class="title">Developed by @Jihad_Thabit in 1/11/2024</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>

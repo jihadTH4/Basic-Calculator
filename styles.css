@@ -1,0 +1,179 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-clr: rgba(150, 150, 150, 0.449);
+    --ops-btn-clr: rgb(230, 150, 15);
+    --nums-btn-clr: rgb(230, 120, 0);
+    --equial-clr: rgb(10, 10, 85);
+    --hash-clr: rgb(100, 100, 100);
+    --res-bg-clr: rgb(245, 214, 179);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+/* Add this to the existing button and result styles */
+button,
+.result {
+    transition: all 0.3s ease;
+    /* Smooth transition for all properties */
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-weight: inherit;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: .5em;
+}
+
+/* Add shadows to buttons */
+button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Light shadow */
+}
+
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Deeper shadow on click */
+    transform: scale(0.98);
+    /* Slight press-down effect */
+}
+
+
+/* Main Containers Section*/
+.container {
+    background-color: var(--background-clr);
+    max-width: 350px;
+    min-height: 500px;
+    margin: 5em auto;
+    padding: 1.5em 1em;
+    border-radius: 2em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+    font-size: .65rem;
+    margin: 0;
+    margin-top: 2em;
+    padding-inline: 1em;
+}
+
+.grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 85px;
+    grid-template-rows: 85px 1fr;
+    place-content: stretch;
+    place-items: stretch;
+    gap: .25em;
+    overflow: hidden;
+}
+
+/* Result Section*/
+.result {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: end;
+    background-color: var(--res-bg-clr);
+    gap: .5em;
+    height: 85px;
+    padding: .5em;
+    font-size: 1.75rem;
+    border-radius: .5em;
+    border: 2px solid white;
+    text-align: right;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hash {
+    font-size: 1rem;
+    display: none;
+    margin-top: 1em;
+    height: 15px;
+    color: var(--hash-clr);
+}
+
+/* Result opreations Section */
+.result-op {
+    width: 100%;
+    display: grid;
+    grid-column-start: 2;
+    grid-column: span 2;
+    gap: .5em;
+    grid-auto-flow: column;
+    place-content: end;
+    padding: .5em;
+}
+
+.result-op button {
+    padding: 1em;
+    background-color: white;
+}
+
+.result-op button:hover {
+    opacity: .8;
+}
+
+/* Numbers Section */
+.numbers {
+    /* padding: .5em; */
+    display: grid;
+    gap: .25em;
+    grid-row-start: 2;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.numbers button {
+    background-color: var(--nums-btn-clr);
+}
+
+.numbers button:hover {
+    background-color: var(--ops-btn-clr);
+}
+
+/* Opreators Section */
+.ops {
+    display: grid;
+    gap: .25em;
+    grid-row-start: 2;
+}
+
+.ops button {
+    padding: .5em;
+    font-size: 1.75rem;
+    width: auto;
+    height: 45px;
+    background-color: var(--ops-btn-clr);
+}
+
+.ops button:hover {
+    background-color: var(--nums-btn-clr);
+}
+
+.eql-btn {
+    color: white;
+    background-color: var(--equial-clr) !important;
+    border-radius: 50%;
+    width: 65px !important;
+    height: 65px !important;
+    margin-inline: .25em;
+}
+
+.eql-btn:hover {
+    opacity: .8;
+}
