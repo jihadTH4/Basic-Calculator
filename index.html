@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculater App | Jihad Thabit</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Calculater App | Jihad Thabit</title>
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="result">
-                <p class="hash"></p>
-                <p class="main-result"></p>
-            </div>
-            <div class="grid">
-                <div class="result-op">
-                    <button onclick="deleteNum()" title="Delete the last entry" aria-label="Delete Last Entry">DEL</button>
-                    <button onclick="clearAll()" title="Clear All" aria-label="Clear All">C</button>
-                </div>
-                <div class="numbers">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>0</button>
-                    <button>.</button>
-                </div>
-                <div class="ops">
-                    <button>/</button>
-                    <button style="padding-top: .75em;">*</button>
-                    <button>-</button>
-                    <button>+</button>
-                    <button onclick="getResult()" class="eql-btn">=</button>
-                </div>
-            </div>
-            <p class="title">Developed by @Jihad_Thabit in 1/11/2024</p>
+  <body>
+    <main class="container">
+      <section class="result" aria-label="Calculator display">
+        <p class="hash" aria-live="polite"></p>
+        <p class="main-result" aria-live="polite"></p>
+      </section>
+      <section class="grid">
+        <div class="result-op">
+          <button
+            onclick="deleteNum()"
+            title="Delete the last entry"
+            aria-label="Delete Last Entry"
+            class="btn btn-del">
+            <span aria-hidden="true">⌫</span>
+            <span class="sr-only">Delete</span>
+          </button>
+          <button
+            onclick="clearAll()"
+            title="Clear All"
+            aria-label="Clear All"
+            class="btn btn-clear">
+            <span aria-hidden="true">C</span>
+            <span class="sr-only">Clear</span>
+          </button>
         </div>
-        <script src="script.js"></script>
-    </body>
-
+        <div class="numbers">
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn">4</button>
+          <button class="btn">5</button>
+          <button class="btn">6</button>
+          <button class="btn">7</button>
+          <button class="btn">8</button>
+          <button class="btn">9</button>
+          <button class="btn">0</button>
+          <button class="btn">.</button>
+        </div>
+        <div class="ops">
+          <button class="btn">/</button>
+          <button class="btn" style="padding-top: 0.75em">*</button>
+          <button class="btn">-</button>
+          <button class="btn">+</button>
+          <button onclick="getResult()" class="btn eql-btn">=</button>
+        </div>
+      </section>
+      <footer>
+        <small class="title">Developed by @Jihad_Thabit in 11/1/2024</small>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
